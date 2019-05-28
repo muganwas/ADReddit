@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     color: "#000",
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#c3c2c4',
   },
   innerEl: {
     margin: 10

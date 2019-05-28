@@ -5,7 +5,7 @@
 import { AppRegistry, Easing, Animated } from 'react-native';
 import {name as appName} from './app.json';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import BasicComponent from './Components/BasicComponent/BasicComponent';
+import BaseComponent from './Components/BaseComponent/BaseComponent';
 
 const screenConfig = {
     duration: 200,
@@ -14,7 +14,7 @@ const screenConfig = {
 };
 
 const MainNavigator = createStackNavigator({
-    First: { screen: BasicComponent }
+    First: { screen: BaseComponent }
 },  
 {
     initialRouteName: 'First',
