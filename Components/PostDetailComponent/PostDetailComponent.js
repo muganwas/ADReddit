@@ -47,8 +47,8 @@ export default class PostDetailComponent extends Component {
         let regex1 = /\[/gi;
         let regex2 = /]/gi;
         let regex3= / /gi;
-        
-        let articleTitle = title.replace(regex1, '').replace(regex2, '').replace(regex3 '_');
+
+        let articleTitle = title.replace(regex1, '').replace(regex2, '').replace(regex3, '_');
         let url = 'https://reddit.com/r/'+subreddit+'/comments/'+id+'/'+articleTitle+'/';
         Linking.openURL(url);
         //console.log(articleTitle);
