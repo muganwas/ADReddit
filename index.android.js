@@ -6,6 +6,7 @@ import {AppRegistry, Easing, Animated} from 'react-native';
 import {name as appName} from './app.json';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import BaseComponent from './Components/BaseComponent/BaseComponent';
+import PostDetailComponent from './Components/PostDetailComponent/PostDetailComponent';
 
 const screenConfig = {
     duration: 200,
@@ -14,11 +15,11 @@ const screenConfig = {
 };
 
 const MainNavigator = createStackNavigator({
-    First: { screen: BaseComponent }
+    First: { screen: BaseComponent },
+    Second: { screen: PostDetailComponent }
 },  
 {
     initialRouteName: 'First',
-    headerBackTitleVisible: true,
     headerMode: 'float',
     mode: 'modal',
     transitionConfig: sceneProps => ({

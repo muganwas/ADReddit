@@ -3,7 +3,6 @@ import { View, ScrollView, Text, Picker } from 'react-native';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { styles } from './styles';
-
 import ListComponent from '../ListComponent/ListComponent';
 
 export default class Posts extends Component {
@@ -40,18 +39,30 @@ export default class Posts extends Component {
             } = res;
             let childrenLen = children.length;
             for(let count = 0; count < childrenLen; count++){
+
+                console.log(children[count])
                 let { 
                     data: {
                         author_fullname,
                         title,
-                        thumbnail
+                        thumbnail,
+                        ups,
+                        score,
+                        num_comments,
+                        id,
+                        subreddit
                     } 
                 } = children[count];
                 categoryPosts[count]= {
                     key: "post" + count,
                     author_fullname,
                     title,
-                    thumbnail
+                    thumbnail,
+                    ups,
+                    score,
+                    num_comments,
+                    id,
+                    subreddit
                 }
             }
 
@@ -64,9 +75,10 @@ export default class Posts extends Component {
 
     render(){
         let { categoryPosts } = this.state;
+        let { navigation } = this.props;
         return(
-            <ScrollView syle= { styles.container }>
-                <ListComponent data = { categoryPosts } />
+            <ScrollView style= { styles.container }>
+                <ListComponent navigation={ navigation } data = { categoryPosts } />
             </ScrollView>
         )
     }

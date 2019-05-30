@@ -7,16 +7,21 @@ import { styles } from './styles';
 const genericThumb = 'https://api.adorable.io/avatars/285/abott@adorable.png';
 export default class ListComponent extends Component {
     render(){
-        let { data } = this.props;
+        let { data, navigation: { navigate } } = this.props;
         return(
-            <View syle= { styles.container }>
+            <View style= { styles.container }>
                 <View style={ styles.innerEl }>
                     <FlatList
                         data={ data }
                         renderItem={({item})=>{
                                 let thumb = (item.thumbnail) !== undefined && (item.thumbnail).length > 8?item.thumbnail:genericThumb;
                                 return (
-                                <TouchableHighlight style={styles.postRow}>
+                                <TouchableHighlight
+                                    onPress={ ()=>{
+                                        navigate('Second', { title: item.title, post: item })
+                                    } }
+                                    style={ styles.postRow }
+                                >
                                     <View style={styles.postInnerContainer}>
                                         <Image style={ styles.postImage } source={{uri: thumb}}/>
                                         <Text style={ styles.PostText }>{item.title}</Text>
@@ -37,5 +42,6 @@ ListComponent.defaultProps = {
 }
 
 ListComponent.propTypes = {
-    data: PropTypes.array.isRequired 
+    data: PropTypes.array.isRequired,
+    onPress: PropTypes.func
 }

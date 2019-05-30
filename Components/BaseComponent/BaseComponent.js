@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Picker} from 'react-native';
+import { View, Text, Image, Picker, StatusBar } from 'react-native';
 import Slider from '@react-native-community/slider';
 import PropTypes from 'prop-types';
 import { styles } from './styles';
@@ -46,7 +46,11 @@ export default class BaseComponent extends Component {
         let { category, limit } = this.state;
         //console.log(navigation)
         return(
-            <View syle= { styles.container }>
+            <View style= { styles.container }>
+                <StatusBar
+                    backgroundColor="#fff"
+                    barStyle="dark-content"
+                />
                 <View style={ styles.innerEl }>
                     <Picker
                         selectedValue={ category }
