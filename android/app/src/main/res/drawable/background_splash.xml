@@ -7,7 +7,4 @@
         android:drawable="@mipmap/icon"
         android:gravity="center"
     />
-
-
-
 </layer-list>
