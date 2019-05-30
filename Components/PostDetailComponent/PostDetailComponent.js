@@ -16,6 +16,7 @@ export default class PostDetailComponent extends Component {
         headerTitleStyle :{
             textAlign: 'center',
             justifyContent: 'center',
+            fontSize: 15,
             color: '#FF6D00',
             alignItems: 'center'
         },

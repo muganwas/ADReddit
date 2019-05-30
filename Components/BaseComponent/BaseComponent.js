@@ -15,8 +15,7 @@ export default class BaseComponent extends Component {
     }
 
     static navigationOptions =({navigation})=> ({
-        title: 'Subreddits',
-        headerLeft: <Image style={ styles.navLogo } source={require('./images/reddit.png')} />,
+        headerLeft: <Image style={ styles.navLogo } source={require('./images/promo_graphic.png')} />,
         headerTitleStyle :{
             textAlign: 'center',
             justifyContent: 'center',

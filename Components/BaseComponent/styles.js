@@ -8,8 +8,8 @@ export const styles = StyleSheet.create({
     margin: 10
   },
   navLogo: {
-    height: 30,
-    width: 35,
+    height: 40,
+    width: 120,
     margin: 5
   },
   welcome: {

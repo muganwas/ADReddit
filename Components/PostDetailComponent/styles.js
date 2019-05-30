@@ -8,11 +8,6 @@ export const styles = StyleSheet.create({
   innerEl: {
     margin: 10
   },
-  navLogo: {
-    height: 30,
-    width: 35,
-    margin: 5
-  },
   welcome: {
     fontSize: 20,
     margin: 10,
@@ -24,7 +19,7 @@ export const styles = StyleSheet.create({
     padding: 10
   },
   title: {
-    fontSize: 16,
+    fontSize: 14,
     padding: 10,
     color: '#000',
     fontWeight: 'bold'
