@@ -1,4 +1,4 @@
-package com.topicpicker;
+package com.adsubpicker;
 
 import android.content.Intent;
 import android.os.Bundle;

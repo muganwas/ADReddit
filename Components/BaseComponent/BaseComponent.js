@@ -5,6 +5,15 @@ import PropTypes from 'prop-types';
 import { styles } from './styles';
 import PostsComponent from '../PostsComponent/PostsComponent';
 
+const categories = {
+    Food: "food",
+    News: "news",
+    Funny: "funny",
+    Movies: "movies",
+    Aww: "aww",
+    Politics: "politics",
+}
+
 export default class BaseComponent extends Component {
     constructor(){
         super();
@@ -55,11 +64,7 @@ export default class BaseComponent extends Component {
                         selectedValue={ category }
                         onValueChange={ this.changeCategory }
                     >
-                        <Picker.Item label="Food" value="food"/>
-                        <Picker.Item label="News" value="news"/>
-                        <Picker.Item label="Funny" value="funny"/>
-                        <Picker.Item label="Movies" value="Movies"/>
-                        <Picker.Item label="TIFU" value="tifu"/>
+                        {Object.keys(categories).map(key=><Picker.Item key={key} label={key} value={categories[key]}/>)}
                     </Picker>
                     <Slider 
                         maximumValue={50}

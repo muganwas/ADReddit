@@ -111,11 +111,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.topicpicker"
+        applicationId "com.adsubpicker"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "2.1"
+        versionCode 1
+        versionName "1.0"
     }
     splits {
         abi {
